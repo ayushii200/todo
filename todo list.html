@@ -5,11 +5,89 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo list</title>
+    <script src="https://kit.fontawesome.com/86347513f6.js" crossorigin="anonymous"></script>
+    <style>
+       body{
+        background-color: lightgreen;
+       }
+        h1{
+            text-align: center;
+            background-color: orangered;
+        }
+        .in{
+            font-size: 30px;
+            background-color: orangered;
+        }
+        input{
+            width: 80%;
+            height: 30px;
+            border: 2px solid black;
+            font-size: 25px;
+        }
+        input:hover{
+            background-color:gainsboro;
+        }
+        .add{
+            font-size: 25px;
+            border: 2px solid black;
+        
+        }
+        .add:hover{
+            background-color: black;
+            color: white;
+        }
+        li{
+            list-style-type: none;
+            font-size: 20px;
+            cursor: pointer;
+            background-color: gray;
+        }
+        ul{
+            padding-left: 10px;
+        }
+        li:hover{
+            background-color: black;
+            color: aliceblue;
+        }
+        
+        .fa-solid{
+            background: lightgray;
+        }
+        .fa-solid:hover{
+            background-color: lightgreen;
+        }
+        .icon{
+            margin-left: 90%;
+            font-size:15px;   
+ }
+ form{
+    padding: 20px 0px;
+ }
+ #s{
+    margin-left: 89%;
+ }
+        
+    </style>
 </head>
 <body>
+    <div class="in">
     <h1>My To Do List</h1>
     <form>
+Title : <input type="text" placeholder="Title...">
+<button class="add">Add</button>
 
-    </form>
+    </form></div>
+    <ul>
+        <li>Book a Ticket<i class="fa-solid fa-xmark icon"></i></li>
+        <li>Go To Station<i class="fa-solid fa-xmark icon"></i></li>
+        <li>Take Your Seat<i class="fa-solid fa-xmark icon" id="s"></i></li>
+    </ul>
+    <script>
+        document.querySelector('.add').onclick = function(){
+    if(document.querySelector('input').value.length == 0){
+        alert("Please Enter Title!")
+    }
+}
+    </script>
 </body>
 </html>
